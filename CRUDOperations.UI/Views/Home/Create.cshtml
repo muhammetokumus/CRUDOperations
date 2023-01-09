@@ -1,0 +1,23 @@
+﻿@using CRUDOPeration.Domain.Entities
+@model Product
+@{
+    ViewData["Title"] = "Add";
+}
+<title>Add Product</title>
+<form method="post" class="w-25 card container my-5">
+    <h4 class="p-3">Add Product</h4>
+    <hr />
+    <div class="form-group p-3">
+        <label>Product Name:</label>
+        <input type="text" asp-for="Name" class="form-control float-end"/>
+        <hr />
+        <span asp-validation-for="Name"></span>
+         <hr />
+        <label>Product Price:</label>
+        <input type="number" asp-for="Price" class="form-control float-end"/>
+        <hr />
+        <span asp-validation-for="Price"></span>
+    </div>
+    <hr />
+    <button type="submit" class="btn btn-primary float-end m-3">Add Product</button>
+</form>
